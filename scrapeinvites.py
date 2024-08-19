@@ -46,3 +46,21 @@ for word in wordlist:
         #serverid = item['id']
         #print(str("Online members: " + str(item['approximate_presence_count'])))
         #print(str("Total members: " + str(item['approximate_member_count'])))
+
+'''
+# If you want to get the output list ordered by member count:
+
+# ADD THIS BELOW THE WORDLIST: invite_list = []
+# KEEP THE REST OF CODE UNTOUCHED, ONLY REPLACE THIS:
+
+    for item in hits:
+        invite = item['vanity_url_code']
+        totalmembers = item['approximate_member_count']
+        if invite is not None:
+            #print(f"{invite}")
+            invite_list.append((invite, totalmembers))
+    
+invite_list.sort(key=lambda x: x[1], reverse=True)
+for invite, totalmembers in invite_list:
+    print(f'{invite}')
+'''

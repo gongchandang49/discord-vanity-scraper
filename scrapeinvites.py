@@ -40,7 +40,9 @@ for word in wordlist:
     hits = json_data['hits']
     for item in hits:
         invite = item['vanity_url_code']
-        # If you print the full "item", you can see other data from the servers like ID, name, etc.
-        #serverid = item['id']
         if invite is not None:
             print(f"{invite}")
+        # If you print the full "item", you can see other data from the servers like ID, name, etc.
+        #serverid = item['id']
+        #print(str("Online members: " + str(item['approximate_presence_count'])))
+        #print(str("Total members: " + str(item['approximate_member_count'])))
